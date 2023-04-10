@@ -1,0 +1,176 @@
+/* NAVIGATION */
+
+.nav {
+	padding: 20px 0;
+}
+
+@media (min-width: 992px) {
+	nav {
+		padding: 40px 0;
+	}
+}
+.nav__row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+a.nav__logo {
+	font-family: 'Noto Sans', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 38px;
+	color: #000000;
+	margin-right: 15px;
+}
+
+@media (min-width: 992px) {
+	a.nav__logo {
+		margin-right: 80px;
+	}
+}
+
+.nav__logo:hover {
+	color: #F72464;
+}
+
+
+
+.nav__list-holder {
+	display: none;
+	/* opacity: 0; */
+	/* transition: opacity 0.2s ease-in; */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150%;
+	background-color: rgba(247, 36, 99, 0.5);
+	z-index: 9;
+}
+
+
+.nav__list-holder--visible {
+	display: block;
+	/* opacity: 1; */
+}
+
+/* .nav__list-holder .nav__list  {
+	transform: translateX(-100%);
+} */
+
+@media (min-width: 992px) {
+	.nav__list-holder {
+		display: block;
+		opacity: 1;
+		position: static;
+		background-color: transparent;
+	}
+}
+
+
+.nav__list {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 260px;
+	bottom: 0;
+	background-color: rgba(0, 0, 0);
+	color: #ffffff;
+	z-index: 9;
+	transform: translateX(-100%);
+	/* display: none; */
+	transition: transform 0.2s ease-in;
+}
+
+
+.nav__list-holder--visible .nav__list {
+	transform: translateX(0%);
+}
+
+
+@media (min-width: 992px) {
+	.nav__list {
+		position: static;
+		color: #000;
+		width: auto;
+		background-color: transparent;
+		display: flex;
+		transform: none;
+	}
+}
+
+
+.nav__item {
+	/* margin-right: 30px; */
+	margin-top: 4px;
+	display: block;
+	padding: 15px;
+	border-bottom: 1px solid rgba(124, 124, 124, 0.5);
+}
+
+@media (min-width: 992px) {
+	.nav__item {
+		margin-right: 30px;
+		border-bottom: none;
+		/* padding: 0; */
+	}
+}
+
+/* убрали отсутуп у последнего */
+.nav__item:last-child {
+	margin-right: 0;
+}
+
+.nav__link {
+	font-size: 18px;
+	/* color: #000; */
+	color: inherit; /* наследует свойство родителя */
+}
+
+.nav__link:hover {
+	color: #F72464;
+}
+
+.nav__cart {
+	margin-left: auto;
+	margin-right: 35px;
+}
+
+@media (min-width: 992px) {
+	.nav__cart {
+		margin-left: 0;
+	}
+}
+
+
+
+.nav__cart-link {
+	display: inline-block;
+	position: relative;
+	padding: 5px;
+	top: 5px;
+}
+
+@media (min-width: 992px) {
+	.nav__cart-link {
+		width: 34px;
+	}
+}
+
+.nav__cart-number {
+	top: -5px;
+	right: -5px;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #F72464;
+	border-radius: 50%;
+	color: #fff;
+	font-weight: 700;
+	font-size: 12px;
+	text-align: center;
+	line-height: 20px;
+}
+
